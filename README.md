@@ -1,29 +1,62 @@
-# expense-tracker
+# Expense Tracker
 
-This template should help get you started developing with Vue 3 in Vite.
+A small, personal Vue 3 finance tracker built for fun and practice.
 
-## Recommended IDE Setup
+- **Add** income & expense transactions  
+- **See** current balance, total income, and total expenses  
+- **Switch** between € and $ (using live exchange rates)  
+- **Persist** data in browser storage so it stays after reloads  
+- **Deploy** easily to GitHub Pages
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Customize configuration
+## 🛠 Local Setup
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+1. **Clone** this repo and enter it:
+  ```
+  bash
+  git clone https://github.com/<your-username>/expense-tracker.git
+  cd expense-tracker
+  ```
 
-## Project Setup
 
-```sh
-npm install
-```
+## Install dependencies:
+npm install or yarn
 
-### Compile and Hot-Reload for Development
+## Configure your API key:
+Create a file named .env in the project root
+Add a line like
+VITE_API_KEY=your_exchange_rate_api_key
+(You can get one for free at the ExchangeRate-API website.)
 
-```sh
-npm run dev
-```
+## Run the development server:
+npm run dev or yarn dev
+Then open http://localhost:3000 in your browser.
 
-### Compile and Minify for Production
+## 📦 Build & Deploy
+I’ve set up a convenient script to build and publish to GitHub Pages:
 
-```sh
-npm run build
-```
+Make sure vite.config.js has the correct base:
+export default defineConfig({
+  base: '/expense-tracker/',
+  // ...
+})
+
+## Run the deploy command:
+npm run deploy or yarn deploy
+That builds the app and pushes the dist/ folder to the gh-pages branch.
+Your live site will be at
+https://<your-username>.github.io/expense-tracker/
+
+## ✅ Tests
+I’ve added unit tests with Vitest & Vue Test Utils. To run them:
+npm run test or yarn test
+
+## 📝 Notes
+All transactions are stored internally in € and only converted at display time.
+LocalStorage is used so data survives reloads, but it’s just a simple demo — there’s no backend.
+Feel free to fork, tweak, or just read through how it works!
+
+This project is licensed under the MIT License. See [LICENSE] for details.
+Built by Damianos Mav Feel free to ⭐ the repo if you find it useful.
+

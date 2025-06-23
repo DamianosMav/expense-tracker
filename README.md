@@ -63,6 +63,6 @@ All transactions are stored internally in € and only converted at display time
 LocalStorage is used so data survives reloads, but it’s just a simple demo — there’s no backend.
 Feel free to fork, tweak, or just read through how it works!
 
-This project is licensed under the MIT License. See [LICENSE] for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 Built by Damianos Mav Feel free to ⭐ the repo if you find it useful.
 

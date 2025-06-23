@@ -21,36 +21,36 @@ A small, personal Vue 3 finance tracker built for fun and practice.
 
 
 ## Install dependencies:
-npm install or yarn
+``` npm install ```
 
 ## Configure your API key:
-Create a file named .env in the project root
-Add a line like
+Rename the **.env.example** from the project root to **.env**.
+Edit .env and set:
 VITE_API_KEY=your_exchange_rate_api_key
 (You can get one for free at the ExchangeRate-API website.)
 
 ## Run the development server:
-npm run dev or yarn dev
+npm run dev
 Then open http://localhost:3000 in your browser.
 
 ## 📦 Build & Deploy
-I’ve set up a convenient script to build and publish to GitHub Pages:
-
 Make sure vite.config.js has the correct base:
+```
 export default defineConfig({
   base: '/expense-tracker/',
   // ...
 })
+```
 
 ## Run the deploy command:
-npm run deploy or yarn deploy
+``` npm run deploy ```
 That builds the app and pushes the dist/ folder to the gh-pages branch.
 Your live site will be at
 https://<your-username>.github.io/expense-tracker/
 
 ## ✅ Tests
-I’ve added unit tests with Vitest & Vue Test Utils. To run them:
-npm run test or yarn test
+Unit tests have been performed with Vitest & Vue Test Utils. To run them:
+``` npm run test ```
 
 ## 📝 Notes
 All transactions are stored internally in € and only converted at display time.
